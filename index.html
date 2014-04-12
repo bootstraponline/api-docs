@@ -51,17 +51,28 @@
 
   <body class="index">
     <div class="tocify-wrapper">
-      <img src="images/logo.png" />
+      <img src="images/logo.png" width="100%">
       <div id="toc">
       </div>
+      <ul class="toc-footer">
+          <li><a href="https://github.com/appium/ruby_lib">Ruby bindings</a></li>
+          <li><a href="https://github.com/appium/python-client">Python bindings</a></li>
+          <li><a href="https://github.com/appium/java-client">Java bindings</a></li>
+          <li><a href="https://github.com/admc/wd">JavaScript bindings</a></li>
+          <li>PHP bindings (Coming soon)</li>
+          <li>C# bindings (Coming soon)</li>
+      </ul>
     </div>
     <div class="page-wrapper">
       <div class="content">
-        <h1 id="page-title">Page Title</h1>
+        <h1 id="appium-api-documentation">Appium API Documentation</h1>
+
+<p>Appium&rsquo;s client bindings enable access to features that aren&rsquo;t yet in the
+selenium bindings.</p>
+
+<h1 id="page-titles">Page Titles</h1>
 
 <blockquote>
-<p>Examples from https://saucelabs.com/docs/ondemand/getting-started/</p>
-
 <p>To verify a page title, use the following code:</p>
 </blockquote>
 <pre class="highlight ruby"><span class="vi">@driver</span><span class="p">.</span><span class="nf">navigate</span><span class="p">.</span><span class="nf">to</span> <span class="s2">"http://saucelabs.com/test/guinea-pig"</span>
@@ -73,8 +84,10 @@
 <pre class="highlight java"><span class="n">driver</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://saucelabs.com/test/guinea-pig"</span><span class="o">);</span>
 <span class="n">assertEquals</span><span class="o">(</span><span class="s">"I am a page title - Sauce Labs"</span><span class="o">,</span> <span class="n">driver</span><span class="o">.</span><span class="na">getTitle</span><span class="o">());</span>
 </pre>
-<pre class="highlight php">$this-&gt;url('http://saucelabs.com/test/guinea-pig');
-$this-&gt;assertContains("I am a page title", $this-&gt;title());
+<pre class="highlight php"><span class="cp">&lt;?php</span>
+  <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">url</span><span class="p">(</span><span class="s1">'http://saucelabs.com/test/guinea-pig'</span><span class="p">);</span>
+  <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertContains</span><span class="p">(</span><span class="s2">"I am a page title"</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">title</span><span class="p">());</span>
+<span class="cp">?&gt;</span>
 </pre>
 <pre class="highlight csharp"><span class="n">driver</span><span class="p">.</span><span class="nf">Navigate</span> <span class="p">().</span><span class="nf">GoToUrl</span> <span class="p">(</span><span class="s">"http://saucelabs.com/test/guinea-pig"</span><span class="p">);</span>
 
@@ -88,6 +101,28 @@ $this-&gt;assertContains("I am a page title", $this-&gt;title());
   <span class="p">})</span>
 <span class="p">})</span>
 </pre>
+
+<p>Page title examples from https://saucelabs.com/docs/ondemand/getting-started/</p>
+
+<p>Appium works with existing Selenium methods such as accessing the title.</p>
+
+<h1 id="strings">Strings</h1>
+<pre class="highlight ruby"><span class="s2">"ruby string"</span>
+</pre>
+<pre class="highlight python"><span class="s">'python string'</span>
+</pre>
+<pre class="highlight java"><span class="s">"java string"</span>
+</pre>
+<pre class="highlight php"><span class="cp">&lt;?php</span>
+  <span class="s1">'php string'</span>
+<span class="cp">?&gt;</span>
+</pre>
+<pre class="highlight csharp"><span class="s">"chsarp string"</span>
+</pre>
+<pre class="highlight javascript"><span class="s1">'javascript string'</span>
+</pre>
+
+<p>Appium supports working with strings.</p>
 
       </div>
       <div class="dark-box">
