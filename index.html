@@ -57,22 +57,36 @@
     </div>
     <div class="page-wrapper">
       <div class="content">
-        <h1 id="authentication">Authentication</h1>
+        <h1 id="page-title">Page Title</h1>
 
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>Examples from https://saucelabs.com/docs/ondemand/getting-started/</p>
+
+<p>To verify a page title, use the following code:</p>
 </blockquote>
-<pre class="highlight ruby"><span class="n">ruby</span>
+<pre class="highlight ruby"><span class="vi">@driver</span><span class="p">.</span><span class="nf">navigate</span><span class="p">.</span><span class="nf">to</span> <span class="s2">"http://saucelabs.com/test/guinea-pig"</span>
+<span class="n">assert</span> <span class="vi">@driver</span><span class="p">.</span><span class="nf">title</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="s2">"I am a page title - Sauce Labs"</span><span class="p">)</span>
 </pre>
-<pre class="highlight python"><span class="n">python</span>
+<pre class="highlight python"><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://saucelabs.com/test/guinea-pig'</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="s">"I am a page title - Sauce Labs"</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
 </pre>
-<pre class="highlight java"><span class="n">java</span>
+<pre class="highlight java"><span class="n">driver</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://saucelabs.com/test/guinea-pig"</span><span class="o">);</span>
+<span class="n">assertEquals</span><span class="o">(</span><span class="s">"I am a page title - Sauce Labs"</span><span class="o">,</span> <span class="n">driver</span><span class="o">.</span><span class="na">getTitle</span><span class="o">());</span>
 </pre>
-<pre class="highlight php">php
+<pre class="highlight php">$this-&gt;url('http://saucelabs.com/test/guinea-pig');
+$this-&gt;assertContains("I am a page title", $this-&gt;title());
 </pre>
-<pre class="highlight csharp"><span class="n">c</span><span class="err">#</span>
+<pre class="highlight csharp"><span class="n">driver</span><span class="p">.</span><span class="nf">Navigate</span> <span class="p">().</span><span class="nf">GoToUrl</span> <span class="p">(</span><span class="s">"http://saucelabs.com/test/guinea-pig"</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">driver</span><span class="p">.</span><span class="n">Title</span> <span class="p">==</span> <span class="s">"I am a page title - Sauce Labs"</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span> <span class="p">(</span><span class="s">"Title is OK."</span><span class="p">);</span>
+<span class="p">}</span>
 </pre>
-<pre class="highlight javascript"><span class="nx">js</span>
+<pre class="highlight javascript"><span class="nx">browser</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"http://saucelabs.com/test/guinea-pig"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">browser</span><span class="p">.</span><span class="nx">title</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">title</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">assert</span><span class="p">.</span><span class="nx">ok</span><span class="p">(</span><span class="o">~</span><span class="nx">title</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'I am a page title - Sauce Labs'</span><span class="p">),</span> <span class="s1">'Wrong title!'</span><span class="p">);</span>
+  <span class="p">})</span>
+<span class="p">})</span>
 </pre>
 
       </div>
