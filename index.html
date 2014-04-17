@@ -62,15 +62,15 @@
           <li><a href="https://github.com/appium/java-client">Java bindings</a></li>
           <li><a href="https://github.com/admc/wd">JavaScript bindings</a></li>
           <li>PHP bindings (Coming soon)</li>
-          <li>C# bindings (Coming soon)</li>
+          <li><a href="https://github.com/appium/appium-dotnet-driver">C# bindings</a></li>
       </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <p><a anchor="android-hax-emulator.md"></a></p>
+        <h1 id="intel®-hardware-accelerated-execution-manager">Intel® Hardware Accelerated Execution Manager</h1>
 
-<h1 id="intel®-hardware-accelerated-execution-manager">Intel® Hardware Accelerated Execution Manager</h1>
+<p><a class="markdown-file" anchor="android-hax-emulator.md"></a></p>
 
 <p>If you find the android emulator a slow and your system runs on an Intel®
 cpu, you can check out HAXM. HAXM let&rsquo;s you leverage your hardware for
@@ -83,9 +83,9 @@ virtualization accelerating the emulator.</p>
 <li>Use Intel&rsquo;s package to install HAXM; The Android SDK Manager appears to not do so successfully.</li>
 </ul>
 
-<p><a anchor="android_coverage.md"></a></p>
-
 <h1 id="android-coverage">Android Coverage</h1>
+
+<p><a class="markdown-file" anchor="android_coverage.md"></a></p>
 
 <p>Android coverage requires the emulator or a rooted device. Build your app
 using the instrument target, for example <code class="prettyprint">$ ant instrument</code></p>
@@ -193,8 +193,6 @@ will download the coverage.ec file for that particular run. Note that you can
 <blockquote>
 <p>java -cp /path/to/android-sdk-macosx/tools/lib/emma_device.jar emma report -r html -in coverage.em,coverage0.ec,coverage1.ec -sp /path/to/your-app/src</p>
 </blockquote>
-
-<p><a anchor="caps.md"></a></p>
 
 <h1 id="appium-server-capabilities">Appium server capabilities</h1>
 
@@ -393,9 +391,9 @@ will download the coverage.ec file for that particular run. Note that you can
 </tr>
 </tbody></table>
 
-<p><a anchor="credits.md"></a></p>
-
 <h1 id="credits">Credits</h1>
+
+<p><a class="markdown-file" anchor="credits.md"></a></p>
 
 <h3 id="these-are-the-projects-that-inspired-us,-or-are-depended-upon-to-make-appium-awesome.">These are the projects that inspired us, or are depended upon to make Appium awesome.</h3>
 
@@ -411,9 +409,9 @@ will download the coverage.ec file for that particular run. Note that you can
 <li><a href="https://github.com/google/ios-webkit-debug-proxy">ios-webkit-debug-proxy</a></li>
 </ul>
 
-<p><a anchor="finding-elements.md"></a></p>
-
 <h1 id="finding-and-interacting-with-elements">Finding and interacting with elements</h1>
+
+<p><a class="markdown-file" anchor="finding-elements.md"></a></p>
 
 <p>Appium supports a subset of the WebDriver locator strategies:</p>
 
@@ -580,9 +578,9 @@ navigator, showing me both the id and element type of the button I clicked.</p>
 
 <p><img alt="Step 1" src="https://raw.github.com/appium/appium/master/assets/InspectorImages/Step2.png" /></p>
 
-<p><a anchor="gestures.md"></a></p>
-
 <h1 id="automating-mobile-gestures">Automating mobile gestures</h1>
+
+<p><a class="markdown-file" anchor="gestures.md"></a></p>
 
 <p>While the Selenium WebDriver spec has support for certain kinds of mobile
 interaction, its parameters are not always easily mappable to the
@@ -988,9 +986,9 @@ it is recommended to write tests that focus on minimum, 50%, and maximum.</p>
 <span class="n">js</span><span class="p">.</span><span class="nf">ExecuteScript</span><span class="p">(</span><span class="s">"mobile: longClick"</span><span class="p">,</span> <span class="n">longTapObject</span><span class="p">);</span>
 </pre>
 
-<p><a anchor="grid.md"></a></p>
-
 <h1 id="selenium-grid">Selenium Grid</h1>
+
+<p><a class="markdown-file" anchor="grid.md"></a></p>
 
 <p>You are able to register your appium server with a local grid by using the
 <b>&ldquo;&ndash;nodeconfig&rdquo;</b> server parameter.</p>
@@ -1041,9 +1039,9 @@ you will see your device on the grid console page:</p>
 
 <p>If <code class="prettyprint">url</code>, <code class="prettyprint">host</code>, and <code class="prettyprint">port</code> are not given, the config will be auto updated to point to localhost:whatever-port-Appium-started-on.</p>
 
-<p><a anchor="grunt.md"></a></p>
-
 <h1 id="appium-grunt-commands">Appium grunt commands</h1>
+
+<p><a class="markdown-file" anchor="grunt.md"></a></p>
 
 <p><a href="http://gruntjs.com">Grunt</a> is like make for Node.js! We use it to automate all
 kinds of appium dev tasks. Here&rsquo;s what you can do:</p>
@@ -1128,9 +1126,9 @@ which SDKs you have available, try <code class="prettyprint">xcodebuild -showsdk
 
 <p>&gt; grunt buildApp:UICatalog:iphonesimulator6.0</p>
 
-<p><a anchor="hybrid.md"></a></p>
-
 <h1 id="automating-hybrid-apps">Automating hybrid apps</h1>
+
+<p><a class="markdown-file" anchor="hybrid.md"></a></p>
 
 <p>One of the core principles of Appium is that you shouldn&rsquo;t have to change your app to test it. In line with that methodology, it is possible to test hybrid web apps (e.g., the &ldquo;UIWebView&rdquo; elements in an iOS app) the same* way you can with Selenium for web apps. There is a bit of technical complexity required so that Appium knows whether you want to automate the native aspects of the app or the web views, but thankfully, we can stay within the WebDriver protocol for everything.</p>
 
@@ -1315,9 +1313,9 @@ https://gist.github.com/feelobot/7309729</p>
   <span class="n">remoteWebDriver</span><span class="o">.</span><span class="na">quit</span><span class="o">();</span>
 </pre>
 
-<p><a anchor="intro.md"></a></p>
-
 <h1 id="introduction-to-appium">Introduction to Appium</h1>
+
+<p><a class="markdown-file" anchor="intro.md"></a></p>
 
 <p>Appium is an open-source tool you can use to automate mobile native, mobile web, and mobile hybrid applications on iOS and Android platforms. &ldquo;Mobile native apps&rdquo; are those written using the iOS or Android SDKs. &ldquo;Mobile web apps&rdquo; are web apps accessed using a mobile browser (Appium supports Safari on iOS and Chrome on Android). &ldquo;Mobile hybrid apps&rdquo; have a native wrapper around a &ldquo;webview&rdquo;&ndash;a native control that enables interaction with web content. Projects like <a href="http://phonegap.com/">Phonegap</a>, for example, make it easy to build apps using web technologies that are then bundled into a native wrapper&mdash;these are hybrid apps.</p>
 
@@ -1373,9 +1371,9 @@ There exist GUI wrappers around the Appium server that can be downloaded. These 
 
 <p>Congratulations! You are now armed with enough knowledge to begin using Appium. Why not head back to the <a href="getting-started">getting started doc</a> for more detailed requirements and instructions?</p>
 
-<p><a anchor="ios-deploy.md"></a></p>
-
 <h1 id="deploying-your-ios-app-to-your-device">Deploying your iOS app to your device</h1>
+
+<p><a class="markdown-file" anchor="ios-deploy.md"></a></p>
 
 <p>To prepare for your Appium tests to run on a real device, you will need to:</p>
 
@@ -1448,9 +1446,9 @@ you are doing this via a Rakefile and a <code class="prettyprint">go_device.sh</
 
 <p>Next: <a href="./real-devices.html">Running Appium on Real Devices</a></p>
 
-<p><a anchor="mobile-web.md"></a></p>
-
 <h1 id="automating-mobile-web-apps">Automating mobile web apps</h1>
+
+<p><a class="markdown-file" anchor="mobile-web.md"></a></p>
 
 <p>If you&rsquo;re interested in automating your web app in Mobile Safari on iOS or
 Chrome on Android, Appium can help you. Basically, you write a normal WebDriver
@@ -1554,9 +1552,9 @@ advanced</b>, only for iOS 6.0 and up)
 <span class="p">};</span>
 </pre>
 
-<p><a anchor="mobile_methods.md"></a></p>
-
 <h1 id="cross-platform-mobile-methods">Cross platform mobile methods</h1>
+
+<p><a class="markdown-file" anchor="mobile_methods.md"></a></p>
 
 <h2 id="reset">Reset</h2>
 
@@ -1616,9 +1614,9 @@ advanced</b>, only for iOS 6.0 and up)
 <pre class="highlight ruby"><span class="n">scroll_to</span> <span class="s1">'Gallery'</span>
 </pre>
 
-<p><a anchor="platform-support.md"></a></p>
-
 <h1 id="appium-platform-support">Appium Platform Support</h1>
+
+<p><a class="markdown-file" anchor="platform-support.md"></a></p>
 
 <p>Appium supports a variety of platforms and testing modalities (native, hybrid, web, real devices, simulators, etc&hellip;). This document is designed to make explicit the level of support and requirements for each of these.</p>
 
@@ -1662,9 +1660,9 @@ advanced</b>, only for iOS 6.0 and up)
 <li>Support for automating vendor-provided or third-party apps: Yes (but not when using the Selendroid backend)</li>
 </ul>
 
-<p><a anchor="real-devices.md"></a></p>
-
 <h1 id="appium-on-real-ios-devices">Appium on real iOS devices</h1>
+
+<p><a class="markdown-file" anchor="real-devices.md"></a></p>
 
 <p>Appium has support for real device testing.</p>
 
@@ -1706,9 +1704,9 @@ advanced</b>, only for iOS 6.0 and up)
 
 <p>Hooray! There&rsquo;s nothing extra to know about testing real Android devices: it works exactly the same as testing on emulators. Make sure that your device can connect to ADB and has Developer Mode enabled.</p>
 
-<p><a anchor="running-on-linux.md"></a></p>
-
 <h1 id="running-appium-on-linux">Running Appium on Linux</h1>
+
+<p><a class="markdown-file" anchor="running-on-linux.md"></a></p>
 
 <h2 id="limitations">Limitations</h2>
 
@@ -1751,9 +1749,9 @@ limitations. For more information you can check out this
 <li>Make sure that <code class="prettyprint">hw.battery=yes</code> in your AVD&rsquo;s <code class="prettyprint">config.ini</code>.</li>
 </ul>
 
-<p><a anchor="running-on-osx.md"></a></p>
-
 <h1 id="running-appium-on-mac-os-x">Running Appium on Mac OS X</h1>
+
+<p><a class="markdown-file" anchor="running-on-osx.md"></a></p>
 
 <p>Appium on OS X supports iOS and Android testing.</p>
 
@@ -1825,9 +1823,9 @@ limitations. For more information you can check out this
 <a href="android-hax-emulator">page</a>.</p></li>
 </ul>
 
-<p><a anchor="running-on-windows.md"></a></p>
-
 <h1 id="running-appium-on-windows">Running Appium on Windows</h1>
+
+<p><a class="markdown-file" anchor="running-on-windows.md"></a></p>
 
 <h2 id="limitations">Limitations</h2>
 
@@ -1886,9 +1884,9 @@ limitations. For more information you can check out this
 <li>Make sure that <code class="prettyprint">hw.battery=yes</code> in your AVD&rsquo;s <code class="prettyprint">config.ini</code>.</li>
 </ul>
 
-<p><a anchor="running-tests.md"></a></p>
-
 <h1 id="running-tests">Running Tests</h1>
+
+<p><a class="markdown-file" anchor="running-tests.md"></a></p>
 
 <h2 id="preparing-your-app-for-test-(ios)">Preparing your app for test (iOS)</h2>
 
@@ -2012,9 +2010,9 @@ sometimes significantly with Appium&rsquo;s. Therefore we recommend you thorough
 read <a href="http://selendroid.io/native.html">Selendroid&rsquo;s documentation</a> before
 writing your scripts for older devices or hybrid apps.</p>
 
-<p><a anchor="server-args.md"></a></p>
-
 <h1 id="appium-server-arguments">Appium server arguments</h1>
+
+<p><a class="markdown-file" anchor="server-args.md"></a></p>
 
 <p>Usage: <code class="prettyprint">node . [flags]</code></p>
 
@@ -2374,9 +2372,9 @@ writing your scripts for older devices or hybrid apps.</p>
 </tr>
 </tbody></table>
 
-<p><a anchor="style-guide.md"></a></p>
-
 <h1 id="style-guide-for-contributors">Style guide for contributors</h1>
+
+<p><a class="markdown-file" anchor="style-guide.md"></a></p>
 
 <p>Thanks for your contribution to Appium! Here are the principles we use when
 writing javascript. Please conform to these so we can merge your pull request
@@ -2585,9 +2583,9 @@ myVariable === undefined
   <span class="p">.</span><span class="nx">nodeify</span><span class="p">(</span><span class="nx">done</span><span class="p">);</span>        
 </pre>
 
-<p><a anchor="touch-actions.md"></a></p>
-
 <h1 id="touch-actions">Touch Actions</h1>
+
+<p><a class="markdown-file" anchor="touch-actions.md"></a></p>
 
 <p>WebDriver provides an API to send some kinds of touch gestures to the devices,
 for example, to long press an element you can do:</p>
@@ -2623,9 +2621,9 @@ for example, to long press an element you can do:</p>
 <p>Some other gestures are supported through the &ldquo;Alternative access method&rdquo;
 explained in <a href="gestures">Automating mobile gestures</a></p>
 
-<p><a anchor="troubleshooting.md"></a></p>
-
 <h1 id="troubleshooting-appium">Troubleshooting Appium</h1>
+
+<p><a class="markdown-file" anchor="troubleshooting.md"></a></p>
 
 <p>Here&rsquo;s what to do if you&rsquo;re experiencing problems, before you submit a ticket
 to github or write to the appium-discuss mailing list.</p>
