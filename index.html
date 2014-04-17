@@ -104,8 +104,6 @@ the coverage.ec file from the device.</p>
 <pre class="highlight ruby"><span class="n">mobile</span> <span class="ss">:endCoverage</span><span class="p">,</span> <span class="ss">intent: </span><span class="s1">'com.example.pkg.END_EMMA'</span><span class="p">,</span> <span class="ss">path: </span><span class="s1">'/mnt/sdcard/coverage.ec'</span>
 </pre>
 
-<h2 id=""></h2>
-
 <p><code class="prettyprint">AndroidManifest.xml</code> defines the instrumentation and broadcast receiver.</p>
 <pre class="highlight xml">    <span class="nt">&lt;instrumentation</span>
         <span class="na">android:name=</span><span class="s">"com.example.pkg.instrumentation.MyInstrumentation"</span>
@@ -247,8 +245,6 @@ will download the coverage.ec file for that particular run. Note that you can
 </tr>
 </tbody></table>
 
-<h2 id=""></h2>
-
 <h3 id="android-only">Android Only</h3>
 
 <table><thead>
@@ -309,8 +305,6 @@ will download the coverage.ec file for that particular run. Note that you can
 <td><code class="prettyprint">300000</code></td>
 </tr>
 </tbody></table>
-
-<h2 id=""></h2>
 
 <h3 id="ios-only">iOS Only</h3>
 
@@ -1127,6 +1121,27 @@ You can overwrite the simulator by passing another SDK to grunt (to figure out
 which SDKs you have available, try <code class="prettyprint">xcodebuild -showsdks</code>:</p>
 
 <p>&gt; grunt buildApp:UICatalog:iphonesimulator6.0</p>
+
+<h1 id="how-to-write-docs">How to write docs</h1>
+
+<p><a class="markdown-file" anchor="how-to-write-docs.md"></a></p>
+
+<p><code class="prettyprint">#</code> is used to write a header. Each document must start with a header.
+Don&rsquo;t use the <code class="prettyprint">===</code> underline method of creating headers.</p>
+
+<h2 id="subheaders">Subheaders</h2>
+
+<p><code class="prettyprint">##</code> is used to write subheaders. Don&rsquo;t use the <code class="prettyprint">---</code> underline method of creating
+sub headers.</p>
+
+<h3 id="unnamed-headers">unnamed headers</h3>
+
+<p><code class="prettyprint">###</code> is used for headers that don&rsquo;t appear in the table of contents.
+Don&rsquo;t use h4 <code class="prettyprint">####</code>, h5 <code class="prettyprint">#####</code>, or h6 <code class="prettyprint">######</code>.</p>
+
+<h4 id="line-breaks">Line breaks</h4>
+
+<p>Don&rsquo;t use line breaks such as <code class="prettyprint">--</code> or <code class="prettyprint">---</code>. This will confuse Slate.</p>
 
 <h1 id="automating-hybrid-apps">Automating hybrid apps</h1>
 
