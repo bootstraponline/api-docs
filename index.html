@@ -77,10 +77,12 @@ cpu, you can check out HAXM. HAXM let&rsquo;s you leverage your hardware for
 virtualization accelerating the emulator.</p>
 
 <ul>
-<li>To install HAXM open the Android SDK Manager, you will find the package under Extras.</li>
+<li>To install HAXM open the Android SDK Manager, you will find the package
+under Extras.</li>
 <li>You can find all relevant documentation on <a href="http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager/">Intel&rsquo;s website</a></li>
 <li>This will require an x86 emulator image</li>
-<li>Use Intel&rsquo;s package to install HAXM; The Android SDK Manager appears to not do so successfully.</li>
+<li>Use Intel&rsquo;s package to install HAXM; The Android SDK Manager appears to not
+do so successfully.</li>
 </ul>
 
 <h1 id="android-coverage">Android Coverage</h1>
@@ -985,21 +987,21 @@ it is recommended to write tests that focus on minimum, 50%, and maximum.</p>
 <p><a class="markdown-file" anchor="grid.md"></a></p>
 
 <p>You are able to register your appium server with a local grid by using the
-<b>&ldquo;&ndash;nodeconfig&rdquo;</b> server parameter.</p>
+<strong>&ldquo;&ndash;nodeconfig&rdquo;</strong> server parameter.</p>
 <pre class="highlight shell"><span class="gp">&gt; </span>node . -V --nodeconfig /path/to/nodeconfig.json
 </pre>
 
-<p>In the node config file you have to define the <b>&ldquo;browserName&rdquo;</b>,
-<b>&ldquo;version&rdquo;</b> and <b>&ldquo;platform&rdquo;</b> and based on these parameters the grid
- will re-direct your test to the right device. You will also need to
- configure you <b>host</b> details and the <b>selenium grid</b> details. For
- a full list of all parameters and descriptions look
- <a href="http://code.google.com/p/selenium/source/browse/java/server/src/org/openqa/grid/common/defaults/GridParameters.properties">here</a></p>
+<p>In the node config file you have to define the <strong>&ldquo;browserName&rdquo;</strong>,
+<strong>&ldquo;version&rdquo;</strong> and <strong>&ldquo;platform&rdquo;</strong> and based on these parameters the grid
+will re-direct your test to the right device. You will also need to
+configure you <strong>host</strong> details and the <strong>selenium grid</strong> details. For
+a full list of all parameters and descriptions look
+<a href="http://code.google.com/p/selenium/source/browse/java/server/src/org/openqa/grid/common/defaults/GridParameters.properties">here</a></p>
 
 <p>Once you start the appium server and it registers with the grid,
 you will see your device on the grid console page:</p>
 
-<p>&ldquo;http://<b>&lt;grid-ip-adress&gt;</b>:<b>&lt;grid-port&gt;</b>/grid/console&rdquo;</p>
+<p>&ldquo;http://**&lt;grid-ip-adress&gt;<strong>:</strong>&lt;grid-port&gt;**/grid/console&rdquo;</p>
 
 <h2 id="grid-node-configuration-example-json-file">Grid Node Configuration Example json file</h2>
 <pre class="highlight xml">{
@@ -1031,7 +1033,8 @@ you will see your device on the grid console page:</p>
 
 <p>Valid platforms are listed <a href="http://selenium.googlecode.com/git/docs/api/java/org/openqa/selenium/Platform.html">here</a></p>
 
-<p>If <code class="prettyprint">url</code>, <code class="prettyprint">host</code>, and <code class="prettyprint">port</code> are not given, the config will be auto updated to point to localhost:whatever-port-Appium-started-on.</p>
+<p>If <code class="prettyprint">url</code>, <code class="prettyprint">host</code>, and <code class="prettyprint">port</code> are not given, the config will be auto updated
+to point to localhost:whatever-port-Appium-started-on.</p>
 
 <h1 id="appium-grunt-commands">Appium grunt commands</h1>
 
@@ -1129,7 +1132,8 @@ Don&rsquo;t use the <code class="prettyprint">===</code> underline method of cre
 
 <h2 id="subheaders">Subheaders</h2>
 
-<p><code class="prettyprint">##</code> is used to write subheaders. Don&rsquo;t use the <code class="prettyprint">---</code> underline method of creating
+<p><code class="prettyprint">##</code> is used to write subheaders. Don&rsquo;t use the <code class="prettyprint">---</code> underline method of
+creating
 sub headers.</p>
 
 <h3 id="regular-headers">Regular headers</h3>
@@ -1152,7 +1156,13 @@ Don&rsquo;t use h4 <code class="prettyprint">####</code>, h5 <code class="pretty
 
 <p><a class="markdown-file" anchor="hybrid.md"></a></p>
 
-<p>One of the core principles of Appium is that you shouldn&rsquo;t have to change your app to test it. In line with that methodology, it is possible to test hybrid web apps (e.g., the &ldquo;UIWebView&rdquo; elements in an iOS app) the same* way you can with Selenium for web apps. There is a bit of technical complexity required so that Appium knows whether you want to automate the native aspects of the app or the web views, but thankfully, we can stay within the WebDriver protocol for everything.</p>
+<p>One of the core principles of Appium is that you shouldn&rsquo;t have to change
+your app to test it. In line with that methodology, it is possible to test
+hybrid web apps (e.g., the &ldquo;UIWebView&rdquo; elements in an iOS app) the same* way
+you can with Selenium for web apps. There is a bit of technical complexity
+required so that Appium knows whether you want to automate the native aspects
+ of the app or the web views, but thankfully, we can stay within the
+ WebDriver protocol for everything.</p>
 
 <h2 id="automating-hybrid-ios-apps">Automating hybrid iOS apps</h2>
 
@@ -1162,23 +1172,40 @@ Don&rsquo;t use h4 <code class="prettyprint">####</code>, h5 <code class="pretty
 <li> Navigate to a portion of your app where a web view is active</li>
 <li> Call <a href="https://code.google.com/p/selenium/source/browse/spec-draft.md?repo=mobile">GET session/:sessionId/contexts</a></li>
 <li> This returns a list of contexts we can access, like &lsquo;NATIVE_APP&rsquo; or &lsquo;WEBVIEW_1&rsquo;</li>
-<li> Call <a href="https://code.google.com/p/selenium/source/browse/spec-draft.md?repo=mobile">POST session/:sessionId/context</a> with the id of the context you want to access</li>
-<li> (This puts your Appium session into a mode where all commands are interpreted as being intended for automating the web view, rather than the native portion of the app. For example, if you run getElementByTagName, it will operate on the DOM of the web view, rather than return UIAElements. Of course, certain WebDriver methods only make sense in one context or another, so in the wrong context you will receive an error message).</li>
-<li> To stop automating in the web view context and go back to automating the native portion of the app, simply call <code class="prettyprint">context</code> again with the native context id to leave the web frame.</li>
+<li> Call <a href="https://code.google.com/p/selenium/source/browse/spec-draft.md?repo=mobile">POST session/:sessionId/context</a>
+with the id of the context you want to access</li>
+<li> (This puts your Appium session into a mode where all commands are
+interpreted as being intended for automating the web view,
+rather than the native portion of the app. For example,
+if you run getElementByTagName, it will operate on the DOM of the web
+view, rather than return UIAElements. Of course,
+certain WebDriver methods only make sense in one context or another,
+so in the wrong context you will receive an error message).</li>
+<li> To stop automating in the web view context and go back to automating the
+native portion of the app, simply call <code class="prettyprint">context</code> again with the native
+context id to leave the web frame.</li>
 </ol>
 
 <h2 id="execution-against-a-real-ios-device">Execution against a real iOS device</h2>
 
-<p>To interrogate and interact with a web view appium establishes a connection using a remote debugger. When executing the examples below against a simulator this connection can be established directly as the simulator and the appium server are on the same machine. When executing against a real device appium is unable to access the web view directly. Therefore the connection has to be established through the USB lead. To establish this connection we use the <a href="https://github.com/google/ios-webkit-debug-proxy">ios-webkit-debugger-proxy</a>.</p>
+<p>To interrogate and interact with a web view appium establishes a connection
+using a remote debugger. When executing the examples below against a
+simulator this connection can be established directly as the simulator and
+the appium server are on the same machine. When executing against a real
+device appium is unable to access the web view directly. Therefore the
+connection has to be established through the USB lead. To establish this
+connection we use the <a href="https://github.com/google/ios-webkit-debug-proxy">ios-webkit-debugger-proxy</a>.</p>
 
-<p>To install the latest tagged version of the ios-webkit-debug-proxy using brew, run the following commands in the terminal:</p>
+<p>To install the latest tagged version of the ios-webkit-debug-proxy using
+brew, run the following commands in the terminal:</p>
 <pre class="highlight shell"><span class="c"># The first command is only required if you don't have brew installed.</span>
 <span class="gp">&gt; </span>ruby -e <span class="s2">"</span><span class="k">$(</span>curl -fsSL https://raw.github.com/mxcl/homebrew/go/install<span class="k">)</span><span class="s2">"</span>
 <span class="gp">&gt; </span>brew update
 <span class="gp">&gt; </span>brew install ios-webkit-debug-proxy
 </pre>
 
-<p>You can also install the latest proxy by cloning it from git and installing it yourself:</p>
+<p>You can also install the latest proxy by cloning it from git and installing
+it yourself:</p>
 <pre class="highlight shell"><span class="c"># Please be aware that this will install the proxy with the latest code (and not a tagged version).</span>
 <span class="gp">&gt; </span>git clone https://github.com/google/ios-webkit-debug-proxy.git
 <span class="gp">&gt; </span><span class="nb">cd </span>ios-webkit-debug-proxy
@@ -1194,7 +1221,10 @@ Don&rsquo;t use h4 <code class="prettyprint">####</code>, h5 <code class="pretty
 <span class="gp">&gt; </span>ios_webkit_debug_proxy -c 0e4b2f612b65e98c1d07d22ee08678130d345429:27753 -d
 </pre>
 
-<p><b>NOTE:</b> the proxy requires the <b>&ldquo;web inspector&rdquo;</b> to be turned on to allow a connection to be established. Turn it on by going to <b> settings &gt; safari &gt; advanced </b>. Please be aware that the web inspector was <b>added as part of iOS 6</b> and was not available previously.</p>
+<p><strong>NOTE:</strong> the proxy requires the <strong>&ldquo;web inspector&rdquo;</strong> to be turned on to
+allow a connection to be established. Turn it on by going to <strong>settings &gt;
+safari &gt; advanced</strong>. Please be aware that the web inspector was <strong>added as
+part of iOS 6</strong> and was not available previously.</p>
 
 <h2 id="wd.js-code-example">Wd.js Code example</h2>
 <pre class="highlight javascript">  <span class="c1">// assuming we have an initialized `driver` object working on the UICatalog app
@@ -1284,12 +1314,18 @@ Don&rsquo;t use h4 <code class="prettyprint">####</code>, h5 <code class="pretty
 
 <h3 id="troubleshooting-webview-with-ruby:">Troubleshooting Webview with Ruby:</h3>
 
-<p>I created a quick function in my helper class to find web elements no matter what window its in (this is useful if your webview id changes or if you are using the same codebase to test android and ios)
+<p>I created a quick function in my helper class to find web elements no matter
+what window its in (this is useful if your webview id changes or if you are
+using the same codebase to test android and ios)
 https://gist.github.com/feelobot/7309729</p>
 
 <h2 id="automating-hybrid-android-apps">Automating hybrid Android apps</h2>
 
-<p>Appium comes with built-in hybrid support via Chromedriver. Appium also uses Selendroid under the hood for webview support on devices older than 4.4. (In that case, you&rsquo;ll want to specify <code class="prettyprint">&quot;device&quot;: &quot;selendroid&quot;</code> as a desired capability). Then follow all the same steps as above for iOS, i.e., switching contexts, etc&hellip;</p>
+<p>Appium comes with built-in hybrid support via Chromedriver. Appium also uses
+Selendroid under the hood for webview support on devices older than 4.4. (In
+that case, you&rsquo;ll want to specify <code class="prettyprint">&quot;device&quot;: &quot;selendroid&quot;</code> as a desired
+capability). Then follow all the same steps as above for iOS, i.e.,
+switching contexts, etc&hellip;</p>
 
 <h2 id="wd.js-code-example">Wd.js Code example</h2>
 <pre class="highlight javascript"><span class="c1">// assuming we have an initialized `driver` object working on a hybrid app
@@ -1334,26 +1370,46 @@ https://gist.github.com/feelobot/7309729</p>
 
 <p><a class="markdown-file" anchor="intro.md"></a></p>
 
-<p>Appium is an open-source tool you can use to automate mobile native, mobile web, and mobile hybrid applications on iOS and Android platforms. &ldquo;Mobile native apps&rdquo; are those written using the iOS or Android SDKs. &ldquo;Mobile web apps&rdquo; are web apps accessed using a mobile browser (Appium supports Safari on iOS and Chrome on Android). &ldquo;Mobile hybrid apps&rdquo; have a native wrapper around a &ldquo;webview&rdquo;&ndash;a native control that enables interaction with web content. Projects like <a href="http://phonegap.com/">Phonegap</a>, for example, make it easy to build apps using web technologies that are then bundled into a native wrapper&mdash;these are hybrid apps.</p>
+<p>Appium is an open-source tool you can use to automate mobile native,
+mobile web, and mobile hybrid applications on iOS and Android platforms.
+&ldquo;Mobile native apps&rdquo; are those written using the iOS or Android SDKs. &ldquo;Mobile
+web apps&rdquo; are web apps accessed using a mobile browser (Appium supports
+Safari on iOS and Chrome on Android). &ldquo;Mobile hybrid apps&rdquo; have a native
+wrapper around a &ldquo;webview&rdquo; &ndash; a native control that enables interaction with
+web content. Projects like <a href="http://phonegap.com/">Phonegap</a>, for example,
+make it easy to build apps using web technologies that are then bundled into
+a native wrapper &ndash; these are hybrid apps.</p>
 
-<p>Importantly, Appium is &ldquo;cross-platform&rdquo;: it allows you to write tests against multiple platforms (iOS, Android), using the same API. This enables a large or total amount of code reuse between iOS and Android testsuites.</p>
+<p>Importantly, Appium is &ldquo;cross-platform&rdquo;: it allows you to write tests against
+multiple platforms (iOS, Android), using the same API. This enables a large
+or total amount of code reuse between iOS and Android testsuites.</p>
 
-<p>For specific information about what it means for Appium to &ldquo;support&rdquo; its platforms, version, and automation modalities, please see the<a href="#platform-support.md"></a>.</p>
+<p>For specific information about what it means for Appium to &ldquo;support&rdquo; its
+platforms, version, and automation modalities, please see the<a href="#platform-support.md"></a>.</p>
 
 <h2 id="appium-philosophy">Appium Philosophy</h2>
 
-<p>Appium was designed to meet mobile automation needs according to a certain philosophy. The key points of this philosophy can be stated as 4 requirements:</p>
+<p>Appium was designed to meet mobile automation needs according to a certain
+philosophy. The key points of this philosophy can be stated as 4 requirements:</p>
 
 <ol>
-<li>You shouldn&rsquo;t have to recompile your app or modify it in any way in order to automate it.</li>
-<li>You shouldn&rsquo;t be locked into a specific language or framework to write and run your tests.</li>
-<li>A mobile automation framework shouldn&rsquo;t reinvent the wheel when it comes to automation APIs.</li>
-<li>A mobile automation framework should be open source, in spirit and practice as well as in name!</li>
+<li>You shouldn&rsquo;t have to recompile your app or modify it in any way in order
+to automate it.</li>
+<li>You shouldn&rsquo;t be locked into a specific language or framework to write and
+run your tests.</li>
+<li>A mobile automation framework shouldn&rsquo;t reinvent the wheel when it comes
+to automation APIs.</li>
+<li>A mobile automation framework should be open source,
+in spirit and practice as well as in name!</li>
 </ol>
 
 <h2 id="appium-design">Appium Design</h2>
 
-<p>So how does the structure of the Appium project live out this philosophy? We meet requirement #1 by using vendor-provided automation frameworks under the hood. That way, we don&rsquo;t need to compile in any Appium-specific or third-party code or frameworks to your app. This means you&rsquo;re testing the same app you&rsquo;re shipping. The vendor-provided frameworks we use are:</p>
+<p>So how does the structure of the Appium project live out this philosophy? We
+meet requirement #1 by using vendor-provided automation frameworks under the
+hood. That way, we don&rsquo;t need to compile in any Appium-specific or
+third-party code or frameworks to your app. This means you&rsquo;re testing the
+same app you&rsquo;re shipping. The vendor-provided frameworks we use are:</p>
 
 <ul>
 <li>iOS: Apple&rsquo;s <a href="https://developer.apple.com/library/ios/documentation/DeveloperTools/Reference/UIAutomationRef/_index.html">UIAutomation</a></li>
@@ -1361,32 +1417,75 @@ https://gist.github.com/feelobot/7309729</p>
 <li>Android 2.3+: Google&rsquo;s <a href="http://developer.android.com/reference/android/app/Instrumentation.html">Instrumentation</a>. (Instrumentation support is provided by bundling a separate project, <a href="http://selendroid.io">Selendroid</a>)</li>
 </ul>
 
-<p>We meet requirement #2 by wrapping the vendor-provided frameworks in one API, the <a href="http://docs.seleniumhq.org/projects/webdriver/">WebDriver</a> API. WebDriver (aka &ldquo;Selenium WebDriver&rdquo;) specifies a client-server protocol (known as the <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol">JSON Wire Protocol</a>). Given this client-server architecture, a client written in any language can be used to send the appropriate HTTP requests to the server. There are already clients written in every popular programming language. This also means that you&rsquo;re free to use whatever test runner and test framework you want; the client libraries are simply HTTP clients and can be mixed into your code any way you please. In other words, Appium &amp; WebDriver clients are not technically &ldquo;test frameworks&rdquo;&ndash;they are &ldquo;automation libraries&rdquo;. You can manage your test environment any way you like!</p>
+<p>We meet requirement #2 by wrapping the vendor-provided frameworks in one API,
+the <a href="http://docs.seleniumhq.org/projects/webdriver/">WebDriver</a> API.
+WebDriver (aka &ldquo;Selenium WebDriver&rdquo;) specifies a client-server protocol
+(known as the <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol">JSON Wire Protocol</a>.
+Given this client-server architecture, a client written in any language can
+be used to send the appropriate HTTP requests to the server. There are
+already clients written in every popular programming language. This also
+means that you&rsquo;re free to use whatever test runner and test framework you
+want; the client libraries are simply HTTP clients and can be mixed into your
+code any way you please. In other words, Appium &amp; WebDriver clients are not
+technically &ldquo;test frameworks&rdquo;&ndash;they are &ldquo;automation libraries&rdquo;. You can
+manage your test environment any way you like!</p>
 
-<p>We meet requirement #3 in the same way: WebDriver has become the de facto standard for automating web browsers, and is a <a href="https://dvcs.w3.org/hg/webdriver/raw-file/tip/webdriver-spec.html">W3C Working Draft</a>. Why do something totally different for mobile? Instead we have <a href="https://code.google.com/p/selenium/source/browse/spec-draft.md?repo=mobile">extended the protocol</a> with extra API methods useful for mobile automation.</p>
+<p>We meet requirement #3 in the same way: WebDriver has become the de facto
+standard for automating web browsers, and is a <a href="https://dvcs.w3.org/hg/webdriver/raw-file/tip/webdriver-spec.html">W3C Working Draft</a>.
+Why do something totally different for mobile? Instead we have <a href="https://code.google.com/p/selenium/source/browse/spec-draft.md?repo=mobile">extended the protocol</a>
+with extra API methods useful for mobile automation.</p>
 
-<p>It should be obvious that requirement #4 is a given&mdash;you&rsquo;re reading this because <a href="https://github.com/appium/appium">Appium is open source</a>.</p>
+<p>It should be obvious that requirement #4 is a given &ndash; you&rsquo;re reading this
+because <a href="https://github.com/appium/appium">Appium is open source</a>.</p>
 
 <h2 id="appium-concepts">Appium Concepts</h2>
 
 <p><em>Client/Server Architecture</em>
-Appium is at its heart a webserver that exposes a REST API. It receives connections from a client, listens for commands, executes those commands on a mobile device, and responds with an HTTP response representing the result of the command execution. The fact that we have a client/server architecture opens up a lot of possibilities: we can write our test code in any language that has a client. We can put the server on a different machine than our tests are running on. We can write test code and rely on a cloud service like <a href="https://saucelabs.com/mobile">Sauce Labs</a> to receive and interpret the commands.</p>
+Appium is at its heart a webserver that exposes a REST API. It receives
+connections from a client, listens for commands, executes those commands on a
+mobile device, and responds with an HTTP response representing the result of
+the command execution. The fact that we have a client/server architecture
+opens up a lot of possibilities: we can write our test code in any language
+that has a client. We can put the server on a different machine than our
+tests are running on. We can write test code and rely on a cloud service
+like <a href="https://saucelabs.com/mobile">Sauce Labs</a> to receive and interpret the commands.</p>
 
 <p><em>Session</em>
-Automation is always performed in the context of a session. Clients initiate a session with a server in ways specific to each library, but they all end up sending a <code class="prettyprint">POST /session</code> request to the server, with a JSON object called the &lsquo;desired capabilities&rsquo; object. At this point the server will start up the automation session and respond with a session ID which can be used in sending further commands.</p>
+Automation is always performed in the context of a session. Clients initiate
+a session with a server in ways specific to each library,
+but they all end up sending a <code class="prettyprint">POST /session</code> request to the server,
+with a JSON object called  the &lsquo;desired capabilities&rsquo; object. At this point
+the server will start up the automation session and respond with a session ID
+which can be used in sending further commands.</p>
 
 <p><em>Desired Capabilities</em>
-Desired capabilities are sets of keys and values (i.e., a map or hash) sent to the Appium server to tell the server what kind of automation session we&rsquo;re interested in starting up. There are also various capabilities which can modify the behavior of the server during automation. For example, we might set the <code class="prettyprint">platformName</code> capability to <code class="prettyprint">iOS</code> to tell Appium that we want an iOS session, rather than an Android one. Or we might set the <code class="prettyprint">safariAllowPopups</code> capability to <code class="prettyprint">true</code> in order to ensure that, during a Safari automation session, we&rsquo;re allowed to use JavaScript to open up new windows. See the<a href="#caps.md"></a> for the complete list of capabilities available for Appium.</p>
+Desired capabilities are sets of keys and values (i.e.,
+a map or hash) sent to the Appium server to tell the server what kind of
+automation session we&rsquo;re interested in starting up. There are also various
+capabilities which can modify the behavior of the server during automation.
+For example, we might set the <code class="prettyprint">platformName</code> capability to <code class="prettyprint">iOS</code> to tell
+Appium that we want an iOS session, rather than an Android one. Or we might
+set the <code class="prettyprint">safariAllowPopups</code> capability to <code class="prettyprint">true</code> in order to ensure that,
+during a Safari automation session, we&rsquo;re allowed to use JavaScript to open
+up new windows. See the<a href="#caps.md"></a> for the complete list of
+capabilities available for Appium.</p>
 
 <p><em>Appium Server</em>
-Appium is a server written with Node.js. It can be built and installed from source or directly from NPM.</p>
+Appium is a server written with Node.js. It can be built and installed from
+source or directly from NPM.</p>
 
 <p><em>Appium.app, Appium.exe</em>
-There exist GUI wrappers around the Appium server that can be downloaded. These come bundled with everything required to run the Appium server, so you don&rsquo;t need to worry about Node. They also come with an Inspector, which enables you to check out the hierarchy of your app. This can come in very handy when writing tests!</p>
+There exist GUI wrappers around the Appium server that can be downloaded.
+These come bundled with everything required to run the Appium server,
+so you don&rsquo;t need to worry about Node. They also come with an Inspector,
+which enables you to check out the hierarchy of your app. This can come in
+very handy when writing tests!</p>
 
 <h2 id="getting-started">Getting Started</h2>
 
-<p>Congratulations! You are now armed with enough knowledge to begin using Appium. Why not head back to the <a href="getting-started">getting started doc</a> for more detailed requirements and instructions?</p>
+<p>Congratulations! You are now armed with enough knowledge to begin using
+Appium. Why not head back to the<a href="#getting-started.md"></a> for
+more detailed requirements and instructions?</p>
 
 <h1 id="deploying-your-ios-app-to-your-device">Deploying your iOS app to your device</h1>
 
@@ -1414,9 +1513,11 @@ to deploy this build to your device</li>
     Example value: iPhone Developer
 </pre>
 
-<p>PROVISIONING_PROFILE is missing from the index of available commands, but may be necessary.</p>
+<p>PROVISIONING_PROFILE is missing from the index of available commands,
+but may be necessary.</p>
 
-<p>Specify &ldquo;CODE_SIGN_IDENTITY&rdquo; &amp; &ldquo;PROVISIONING_PROFILE&rdquo; settings in the xcodebuild command:</p>
+<p>Specify &ldquo;CODE_SIGN_IDENTITY&rdquo; &amp; &ldquo;PROVISIONING_PROFILE&rdquo; settings in the
+xcodebuild command:</p>
 <pre class="highlight plaintext">xcodebuild -sdk &lt;iphoneos&gt; -target &lt;target_name&gt; -configuration &lt;Debug&gt; CODE_SIGN_IDENTITY="iPhone Developer: Mister Smith" PROVISIONING_PROFILE="XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX"
 </pre>
 
@@ -1495,25 +1596,26 @@ attempting to use Appium.</p>
  Safari has been launched the Remote Debugger automatically connects using
  the <a href="https://github.com/google/ios-webkit-debug-proxy">ios-webkit-webkit-proxy</a>.</p>
 
-<p><b>NOTE:</b> There is currently <a href="https://github.com/google/ios-webkit-debug-proxy/issues/38">a bug</a>
-in the ios-webkit-debug-proxy. You have to trust the machine before you can run the ios-webkit-debug-proxy
+<p><strong>NOTE:</strong> There is currently <a href="https://github.com/google/ios-webkit-debug-proxy/issues/38">a bug</a>
+in the ios-webkit-debug-proxy. You have to trust the machine before you can
+run the ios-webkit-debug-proxy
 against your iOS device.</p>
 
 <h2 id="setup">Setup</h2>
 
 <p>Before you can run your tests against Safari on a real device you will need to:
-* Have the <b>ios-webkit-debug-proxy</b> installed and running (see the<a href="#hybrid.md"></a> for instructions)
-* Turn on <b>web inspector</b> on iOS device (<b>settings &gt; safari &gt;
-advanced</b>, only for iOS 6.0 and up)
-* Create a <b>provisioning profile</b> that can be used to deploy the SafariLauncherApp.</p>
+* Have the <strong>ios-webkit-debug-proxy</strong> installed and running (see the<a href="#hybrid.md"></a> for instructions)
+* Turn on <strong>web inspector</strong> on iOS device (<strong>settings &gt; safari &gt;
+advanced</strong>, only for iOS 6.0 and up)
+* Create a <strong>provisioning profile</strong> that can be used to deploy the SafariLauncherApp.</p>
 
-<p>To create a profile for the launcher go into the <b>Apple Developers Member Center</b> and:
-  * <b>Step 1:</b> Create a <b>new App Id</b> and select the WildCard App ID option and set it to &ldquo;*&rdquo;
-  * <b>Step 2:</b> Create a <b>new Development Profile</b> and for App Id select the one created in step 1.
-  * <b>Step 3:</b> Select your <b>certificate(s) and device(s)</b> and click next.
-  * <b>Step 4:</b> Set the profile name and <b>generate the profile</b>.
-  * <b>Step 5:</b> Download the profile and open it with a text editor.
-  * <b>Step 6:</b> Search for the <b>UUID</b> and the string for it is your <b>identity code</b>.</p>
+<p>To create a profile for the launcher go into the <strong>Apple Developers Member Center</strong> and:
+  * <strong>Step 1:</strong> Create a <strong>new App Id</strong> and select the WildCard App ID option and set it to &ldquo;*&rdquo;
+  * <strong>Step 2:</strong> Create a <strong>new Development Profile</strong> and for App Id select the one created in step 1.
+  * <strong>Step 3:</strong> Select your <strong>certificate(s) and device(s)</strong> and click next.
+  * <strong>Step 4:</strong> Set the profile name and <strong>generate the profile</strong>.
+  * <strong>Step 5:</strong> Download the profile and open it with a text editor.
+  * <strong>Step 6:</strong> Search for the <strong>UUID</strong> and the string for it is your <strong>identity code</strong>.</p>
 
 <p>Now that you have a profile open a terminal and run the following commands:</p>
 <pre class="highlight shell"><span class="gp">$ </span>git clone https://github.com/appium/appium.git
@@ -1534,7 +1636,7 @@ advanced</b>, only for iOS 6.0 and up)
 
 <h2 id="running-your-test">Running your test</h2>
 
-<p>To configure you test to run against safari simpley set the <b>&ldquo;app&rdquo;</b> to be <b>&ldquo;safari&rdquo;</b>.</p>
+<p>To configure you test to run against safari simpley set the <strong>&ldquo;app&rdquo;</strong> to be <strong>&ldquo;safari&rdquo;</strong>.</p>
 
 <h2 id="java-example">Java Example</h2>
 <pre class="highlight java"><span class="c1">//setup the web driver and launch the webview app.</span>
@@ -1589,7 +1691,10 @@ advanced</b>, only for iOS 6.0 and up)
 
 <p>Fetch a file from the device&rsquo;s filesystem, returning it base64 encoded.</p>
 
-<p>Takes a single argument, <code class="prettyprint">path</code>.  On Android and iOS, this is either the path to the file (relative to the root of the app&rsquo;s file system).  On iOS only, if path starts with <code class="prettyprint">/AppName.app</code>, which will be replaced with the application&rsquo;s .app directory</p>
+<p>Takes a single argument, <code class="prettyprint">path</code>. On Android and iOS, this is either the path
+to the file (relative to the root of the app&rsquo;s file system).  On iOS only,
+if path starts with <code class="prettyprint">/AppName.app</code>, which will be replaced with the
+application&rsquo;s .app directory</p>
 <pre class="highlight ruby"><span class="c1"># Android and iOS</span>
 <span class="vi">@driver</span><span class="p">.</span><span class="nf">execute_script</span> <span class="s1">'mobile: pullFile'</span><span class="p">,</span> <span class="p">{</span><span class="ss">path: </span><span class="s1">'/Library/AddressBook/AddressBook.sqlitedb'</span><span class="p">}</span> <span class="c1">#=&gt; /Library/AddressBook/AddressBook.sqlitedb</span>
 
@@ -1635,46 +1740,74 @@ advanced</b>, only for iOS 6.0 and up)
 
 <p><a class="markdown-file" anchor="platform-support.md"></a></p>
 
-<p>Appium supports a variety of platforms and testing modalities (native, hybrid, web, real devices, simulators, etc&hellip;). This document is designed to make explicit the level of support and requirements for each of these.</p>
+<p>Appium supports a variety of platforms and testing modalities (native,
+hybrid, web, real devices, simulators, etc&hellip;). This document is designed to
+make explicit the level of support and requirements for each of these.</p>
 
 <h2 id="ios-support">iOS Support</h2>
 
-<p>See<a href="#running-on-osx.md"></a> for iOS requirements and setup instructions.</p>
+<p>See<a href="#running-on-osx.md"></a> for iOS requirements and setup
+instructions.</p>
 
 <ul>
 <li>Versions: 6.1, 7.0, and 7.1</li>
 <li>Devices: iPhone Simulator, iPad Simulator, and real iPhones and iPads</li>
-<li>Native app support: Yes, with debug version of .app (simulator), or correctly-signed .ipa (real devices). Underlying support is provided by Apple&rsquo;s <a href="https://developer.apple.com/library/ios/documentation/DeveloperTools/Reference/UIAutomationRef/_index.html">UIAutomation</a> framework.</li>
-<li>Mobile web support: Yes, via automation of mobile Safari. For real devices, ios-webkit-remote-debugger is required, and automation of native aspects of the Safari interface is not possible. See the<a href="#mobile-web.md"></a> for instructions.</li>
-<li>Hybrid support: Yes. For real devices, ios-webkit-remote-debugger is required. See the <a href="hybrid">hybrid doc</a> for instructions.</li>
+<li>Native app support: Yes, with debug version of .app (simulator),
+or correctly-signed .ipa (real devices). Underlying support is provided by
+Apple&rsquo;s <a href="https://developer.apple.com/library/ios/documentation/DeveloperTools/Reference/UIAutomationRef/_index.html">UIAutomation</a>
+framework.</li>
+<li>Mobile web support: Yes, via automation of mobile Safari. For real devices,
+ios-webkit-remote-debugger is required, and automation of native aspects of
+the Safari interface is not possible. See the<a href="#mobile-web.md"></a> for instructions.</li>
+<li>Hybrid support: Yes. For real devices, ios-webkit-remote-debugger is
+required. See the<a href="#hybrid.md"></a> for instructions.</li>
 <li>Support for automating multiple apps in one session: No</li>
 <li>Support for automating multiple devices simultaneously: No</li>
-<li>Support for automating vendor-provided or third-party apps: Only vendor-provided apps (Preferences, Maps, etc&hellip;), and only on the simulator</li>
+<li>Support for automating vendor-provided or third-party apps: Only
+vendor-provided apps (Preferences, Maps, etc&hellip;), and only on the simulator</li>
 </ul>
 
 <h2 id="android-support">Android Support</h2>
 
-<p>See <a href="running-on-osx#android">Running on OS X: Android</a>, <a href="running-on-windows">Running on Windows</a>, or <a href="running-on-linux">Running on Linux</a> for Android requirements and setup instructions.</p>
+<p>See<a href="#running-on-osx.md"></a>,<a href="#running-on-windows.md"></a>, or<a href="#running-on-linux.md"></a> for Android requirements and setup
+instructions.</p>
 
 <ul>
 <li>Versions: 2.3 and up
 
 <ul>
-<li>Versions 4.2 and up are supported via Appium&rsquo;s own <a href="http://developer.android.com/tools/help/uiautomator/index.html">UiAutomator</a> libraries. This is the default automation backend.</li>
-<li>Versions 2.3 through 4.3 are supported via Appium&rsquo;s bundled version of <a href="http://selendroid.io">Selendroid</a>, which utilizes <a href="http://developer.android.com/reference/android/app/Instrumentation.html">Instrumentation</a>. Selendroid has a different set of commands than the default Appium (though this is rapidly being minimized) and a different support profile. To access this automation backend, use the <code class="prettyprint">automationName</code> capability with the value <code class="prettyprint">Selendroid</code>.</li>
+<li>Versions 4.2 and up are supported via Appium&rsquo;s own <a href="http://developer.android.com/tools/help/uiautomator/index.html">UiAutomator</a>
+libraries. This is the default automation backend.</li>
+<li>Versions 2.3 through 4.3 are supported via Appium&rsquo;s bundled version of
+<a href="http://selendroid.io">Selendroid</a>, which utilizes <a href="http://developer.android.com/reference/android/app/Instrumentation.html">Instrumentation</a>.
+Selendroid has a different set of commands than the default Appium (though
+this is rapidly being minimized) and a different support profile. To
+access this automation backend, use the <code class="prettyprint">automationName</code> capability with
+the value <code class="prettyprint">Selendroid</code>.</li>
 </ul></li>
 <li>Devices: Android emulators and real Android devices</li>
 <li>Native app support: Yes</li>
-<li>Mobile web support: Yes (but not when using Selendroid backend). Automation is effected using a bundled <a href="https://code.google.com/p/selenium/wiki/ChromeDriver">Chromedriver</a> server as a proxy. With 4.2 and 4.3, automation works on official Chrome browser or Chromium only. With 4.4+, automation also works on the built-in &ldquo;Browser&rdquo; app. Chrome/Chromium/Browser must already be installed on the device under test. See the<a href="#mobile-web.md"></a> for instructions.</li>
-<li>Hybrid support: Yes. See the <a href="hybrid">hybrid doc</a> for instructions.
+<li>Mobile web support: Yes (but not when using Selendroid backend). Automation
+is effected using a bundled <a href="https://code.google.com/p/selenium/wiki/ChromeDriver">Chromedriver</a>
+server as a proxy. With 4.2 and 4.3, automation works on official Chrome
+browser or Chromium only. With 4.4+, automation also works on the built-in
+&ldquo;Browser&rdquo; app. Chrome/Chromium/Browser must already be installed on the
+device under test. See the<a href="#mobile-web.md"></a> for instructions.</li>
+<li>Hybrid support: Yes. See the<a href="#hybrid.md"></a> for instructions.
 
 <ul>
 <li>With default Appium automation backend: versions 4.4 and up</li>
 <li>With Selendroid automation backend: versions 2.3 and up</li>
 </ul></li>
-<li>Support for automating multiple apps in one session: Yes (but not when using the Selendroid backend)</li>
-<li>Support for automating multiple devices simultaneously: Yes, though Appium must be started using different ports for the server parameters <code class="prettyprint">--port</code>, <code class="prettyprint">--bootstrap-port</code> (or <code class="prettyprint">--selendroid-port</code>) and/or <code class="prettyprint">--chromedriver-port</code>. See the<a href="#server-args.md"></a> for more information on these parameters.</li>
-<li>Support for automating vendor-provided or third-party apps: Yes (but not when using the Selendroid backend)</li>
+<li>Support for automating multiple apps in one session: Yes (but not when
+using the Selendroid backend)</li>
+<li>Support for automating multiple devices simultaneously: Yes,
+though Appium must be started using different ports for the server
+parameters <code class="prettyprint">--port</code>, <code class="prettyprint">--bootstrap-port</code> (or <code class="prettyprint">--selendroid-port</code>) and/or
+<code class="prettyprint">--chromedriver-port</code>. See the<a href="#server-args.md"></a> for more
+information on these parameters.</li>
+<li>Support for automating vendor-provided or third-party apps: Yes (but not
+when using the Selendroid backend)</li>
 </ul>
 
 <h1 id="appium-on-real-ios-devices">Appium on real iOS devices</h1>
@@ -1686,7 +1819,8 @@ advanced</b>, only for iOS 6.0 and up)
 <p>To get started on a real device, you will need the following:</p>
 
 <ol>
-<li>An Apple Developer ID and a valid Developer Account with a configured distribution certificate and provisioning profile.</li>
+<li>An Apple Developer ID and a valid Developer Account with a configured
+distribution certificate and provisioning profile.</li>
 <li>An iPad or iPhone.</li>
 <li>The source code of your app.</li>
 <li>A Mac with XCode and the XCode Command Line Developer Tools</li>
@@ -1694,15 +1828,22 @@ advanced</b>, only for iOS 6.0 and up)
 
 <h2 id="provisioning-profile">Provisioning Profile</h2>
 
-<p>A valid iOS Development Distribution Certificate and Provisioning Profile are necessary to test on a real device. You can find information about configuring these in the <a href="http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/YourFirstAppStoreSubmission/TestYourApponManyDevicesandiOSVersions/TestYourApponManyDevicesandiOSVersions.html">Apple documentation</a></p>
+<p>A valid iOS Development Distribution Certificate and Provisioning Profile are
+necessary to test on a real device. You can find information about
+configuring these in the <a href="http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/YourFirstAppStoreSubmission/TestYourApponManyDevicesandiOSVersions/TestYourApponManyDevicesandiOSVersions.html">Apple documentation</a></p>
 
 <p>You will also need to <a href="http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/YourFirstAppStoreSubmission/ProvisionYourDevicesforDevelopment/ProvisionYourDevicesforDevelopment.html#//apple_ref/doc/uid/TP40011375-CH4-SW1">sign your app</a>.</p>
 
-<p>Appium will attempt to install your app using Fruitstrap, but it is often easier to pre-install your app using Xcode to ensure there are no problems.</p>
+<p>Appium will attempt to install your app using Fruitstrap,
+but it is often easier to pre-install your app using Xcode to ensure there
+are no problems.</p>
 
 <h2 id="running-your-tests-with-appium">Running your tests with Appium</h2>
 
-<p>Once your device and app are configured, you can run tests on that device by passing the -U flag to the server, and passing the bundle ID (if the app is installed on the device) or the path to the .ipa file via the <code class="prettyprint">--app</code> flag or the <code class="prettyprint">app</code> desired capability:</p>
+<p>Once your device and app are configured, you can run tests on that device by
+passing the -U flag to the server, and passing the bundle ID (if the app is
+installed on the device) or the path to the .ipa file via the <code class="prettyprint">--app</code> flag or
+ the <code class="prettyprint">app</code> desired capability:</p>
 <pre class="highlight plaintext">node . -U &lt;UDID&gt; --app &lt;bundle_id&gt;
 </pre>
 
@@ -1711,7 +1852,8 @@ advanced</b>, only for iOS 6.0 and up)
 <h2 id="troubleshooting-ideas">Troubleshooting ideas</h2>
 
 <ol>
-<li>Make sure UDID is correct by checking it in xcode organizer or itunes. It is a long string (20+ chars)</li>
+<li>Make sure UDID is correct by checking it in xcode organizer or itunes. It
+is a long string (20+ chars)</li>
 <li>Make sure that you can run your tests against simulator</li>
 <li>Double check that you can invoke your automation from instruments.</li>
 <li>Make sure instruments in closed already</li>
@@ -1719,7 +1861,9 @@ advanced</b>, only for iOS 6.0 and up)
 
 <h1 id="appium-on-real-android-devices">Appium on real Android devices</h1>
 
-<p>Hooray! There&rsquo;s nothing extra to know about testing real Android devices: it works exactly the same as testing on emulators. Make sure that your device can connect to ADB and has Developer Mode enabled.</p>
+<p>Hooray! There&rsquo;s nothing extra to know about testing real Android devices: it
+works exactly the same as testing on emulators. Make sure that your device
+can connect to ADB and has Developer Mode enabled.</p>
 
 <h1 id="running-appium-on-linux">Running Appium on Linux</h1>
 
@@ -1742,27 +1886,31 @@ you have an API Level 17 or greater API installed. You will also need Ant to
 build the bootstrap jar that Appium uses for testing Android.</p>
 
 <p>Finally, set <code class="prettyprint">$ANDROID_HOME</code> to be your Android SDK path. If you unzipped the
-Android SDK to /usr/local/adt/, for example, you should add this to your shell startup:</p>
+Android SDK to /usr/local/adt/, for example, you should add this to your
+shell startup:</p>
 
 <p>export ANDROID_HOME=&ldquo;/usr/local/adt/sdk&rdquo;</p>
 
-<p>Now that you&rsquo;re setup to run Appium, run <code class="prettyprint">./reset.sh --android</code> from your Appium checkout to install all the dependencies.</p>
+<p>Now that you&rsquo;re setup to run Appium, run <code class="prettyprint">./reset.sh --android</code> from your
+Appium checkout to install all the dependencies.</p>
 
 <h2 id="running-appium">Running Appium</h2>
 
 <p>To run tests on Linux, you will need to have the Android Emulator booted and
-running an AVD with API Level 17 or greater. Then run Appium on the command line using node.js:</p>
+running an AVD with API Level 17 or greater. Then run Appium on the command
+line using node.js:</p>
 
 <p>node .</p>
 
-<p>See the<a href="#server-args.md"></a> for all the command line arguments.</p>
+<p>See the<a href="#server-args.md"></a> for all the command line
+arguments.</p>
 
 <h2 id="notes">Notes</h2>
 
 <ul>
 <li>There exists a hardware accelerated emulator for android, it has it&rsquo;s own
 limitations. For more information you can check out this
-<a href="android-hax-emulator">page</a>.</li>
+<a href="#android-hax-emulator.md"></a>.</li>
 <li>Make sure that <code class="prettyprint">hw.battery=yes</code> in your AVD&rsquo;s <code class="prettyprint">config.ini</code>.</li>
 </ul>
 
@@ -1827,9 +1975,9 @@ path. If you unzipped the Android SDK to <code class="prettyprint">/usr/local/ad
 should add this to your shell startup:</p>
 
 <p>export ANDROID_HOME=&ldquo;/usr/local/adt/sdk&rdquo;</p></li>
-<li><p>Make sure you have <a href="http://maven.apache.org/download.cgi">Maven 3.0.5</a> installed (<code class="prettyprint">mvn</code>). Maven 3.1.1 will <em>not</em> work!
-We need Maven for Selendroid support, which helps Appium run on Android
-versions below 4.2.</p></li>
+<li><p>Make sure you have <a href="http://maven.apache.org/download.cgi">Maven 3.1.1</a>
+or newer installed (<code class="prettyprint">mvn</code>). We need Maven for Selendroid support,
+which helps Appium run on Android versions below 4.2.</p></li>
 <li><p>Make sure you have an AVD set to a recent Android version (one that can run
 UIAutomator. Just choose the latest Android OS). You can create an AVD by
 using the android SDK tools. Remember the name you give the AVD, so that you
