@@ -1147,7 +1147,7 @@ Don&rsquo;t use h4 <code class="prettyprint">####</code>, h5 <code class="pretty
 
 <h2 id="linking">Linking</h2>
 
-<p>Link to another document using this syntax: <a href="#filename.md"></a>`</p>
+<p>Link to another document using this syntax:  <a href="#filename.md">link text</a>`</p>
 
 <p>To link inside a document, use the <code class="prettyprint">#</code> from the Slate URL.
 <code class="prettyprint">[go direct to json](#json-wire-protocol-server-extensions)</code></p>
@@ -1385,7 +1385,7 @@ multiple platforms (iOS, Android), using the same API. This enables a large
 or total amount of code reuse between iOS and Android testsuites.</p>
 
 <p>For specific information about what it means for Appium to &ldquo;support&rdquo; its
-platforms, version, and automation modalities, please see the<a href="#platform-support.md"></a>.</p>
+platforms, version, and automation modalities, please see the <a href="#platform-support.md">platform support doc</a>.</p>
 
 <h2 id="appium-philosophy">Appium Philosophy</h2>
 
@@ -1467,7 +1467,7 @@ For example, we might set the <code class="prettyprint">platformName</code> capa
 Appium that we want an iOS session, rather than an Android one. Or we might
 set the <code class="prettyprint">safariAllowPopups</code> capability to <code class="prettyprint">true</code> in order to ensure that,
 during a Safari automation session, we&rsquo;re allowed to use JavaScript to open
-up new windows. See the<a href="#caps.md"></a> for the complete list of
+up new windows. See the <a href="#caps.md">capabilities doc</a> for the complete list of
 capabilities available for Appium.</p>
 
 <p><em>Appium Server</em>
@@ -1484,7 +1484,7 @@ very handy when writing tests!</p>
 <h2 id="getting-started">Getting Started</h2>
 
 <p>Congratulations! You are now armed with enough knowledge to begin using
-Appium. Why not head back to the<a href="#getting-started.md"></a> for
+Appium. Why not head back to the <a href="#getting-started.md">getting started doc</a> for
 more detailed requirements and instructions?</p>
 
 <h1 id="deploying-your-ios-app-to-your-device">Deploying your iOS app to your device</h1>
@@ -1604,7 +1604,7 @@ against your iOS device.</p>
 <h2 id="setup">Setup</h2>
 
 <p>Before you can run your tests against Safari on a real device you will need to:
-* Have the <strong>ios-webkit-debug-proxy</strong> installed and running (see the<a href="#hybrid.md"></a> for instructions)
+* Have the <strong>ios-webkit-debug-proxy</strong> installed and running (see the <a href="#hybrid.md">hybrid docs</a> for instructions)
 * Turn on <strong>web inspector</strong> on iOS device (<strong>settings &gt; safari &gt;
 advanced</strong>, only for iOS 6.0 and up)
 * Create a <strong>provisioning profile</strong> that can be used to deploy the SafariLauncherApp.</p>
@@ -1746,7 +1746,7 @@ make explicit the level of support and requirements for each of these.</p>
 
 <h2 id="ios-support">iOS Support</h2>
 
-<p>See<a href="#running-on-osx.md"></a> for iOS requirements and setup
+<p>See <a href="#running-on-osx.md">Running on OS X: iOS</a> for iOS requirements and setup
 instructions.</p>
 
 <ul>
@@ -1758,9 +1758,9 @@ Apple&rsquo;s <a href="https://developer.apple.com/library/ios/documentation/Dev
 framework.</li>
 <li>Mobile web support: Yes, via automation of mobile Safari. For real devices,
 ios-webkit-remote-debugger is required, and automation of native aspects of
-the Safari interface is not possible. See the<a href="#mobile-web.md"></a> for instructions.</li>
+the Safari interface is not possible. See the <a href="#mobile-web.md">mobile web doc</a> for instructions.</li>
 <li>Hybrid support: Yes. For real devices, ios-webkit-remote-debugger is
-required. See the<a href="#hybrid.md"></a> for instructions.</li>
+required. See the <a href="#hybrid.md">hybrid doc</a> for instructions.</li>
 <li>Support for automating multiple apps in one session: No</li>
 <li>Support for automating multiple devices simultaneously: No</li>
 <li>Support for automating vendor-provided or third-party apps: Only
@@ -1769,7 +1769,7 @@ vendor-provided apps (Preferences, Maps, etc&hellip;), and only on the simulator
 
 <h2 id="android-support">Android Support</h2>
 
-<p>See<a href="#running-on-osx.md"></a>,<a href="#running-on-windows.md"></a>, or<a href="#running-on-linux.md"></a> for Android requirements and setup
+<p>See <a href="#running-on-osx.md">Running on OS X: Android</a>, <a href="#running-on-windows.md">Running on Windows</a>, or <a href="#running-on-linux.md">Running on Linux</a> for Android requirements and setup
 instructions.</p>
 
 <ul>
@@ -1792,8 +1792,8 @@ is effected using a bundled <a href="https://code.google.com/p/selenium/wiki/Chr
 server as a proxy. With 4.2 and 4.3, automation works on official Chrome
 browser or Chromium only. With 4.4+, automation also works on the built-in
 &ldquo;Browser&rdquo; app. Chrome/Chromium/Browser must already be installed on the
-device under test. See the<a href="#mobile-web.md"></a> for instructions.</li>
-<li>Hybrid support: Yes. See the<a href="#hybrid.md"></a> for instructions.
+device under test. See the <a href="#mobile-web.md">mobile web doc</a> for instructions.</li>
+<li>Hybrid support: Yes. See the <a href="#hybrid.md">hybrid doc</a> for instructions.
 
 <ul>
 <li>With default Appium automation backend: versions 4.4 and up</li>
@@ -1804,7 +1804,7 @@ using the Selendroid backend)</li>
 <li>Support for automating multiple devices simultaneously: Yes,
 though Appium must be started using different ports for the server
 parameters <code class="prettyprint">--port</code>, <code class="prettyprint">--bootstrap-port</code> (or <code class="prettyprint">--selendroid-port</code>) and/or
-<code class="prettyprint">--chromedriver-port</code>. See the<a href="#server-args.md"></a> for more
+<code class="prettyprint">--chromedriver-port</code>. See the <a href="#server-args.md">server args doc</a> for more
 information on these parameters.</li>
 <li>Support for automating vendor-provided or third-party apps: Yes (but not
 when using the Selendroid backend)</li>
@@ -1902,7 +1902,7 @@ line using node.js:</p>
 
 <p>node .</p>
 
-<p>See the<a href="#server-args.md"></a> for all the command line
+<p>See the <a href="#server-args.md">server documentation</a> for all the command line
 arguments.</p>
 
 <h2 id="notes">Notes</h2>
@@ -1910,7 +1910,7 @@ arguments.</p>
 <ul>
 <li>There exists a hardware accelerated emulator for android, it has it&rsquo;s own
 limitations. For more information you can check out this
-<a href="#android-hax-emulator.md"></a>.</li>
+<a href="#android-hax-emulator.md">page</a>.</li>
 <li>Make sure that <code class="prettyprint">hw.battery=yes</code> in your AVD&rsquo;s <code class="prettyprint">config.ini</code>.</li>
 </ul>
 
@@ -1985,7 +1985,7 @@ can launch an emulator with it and run tests against it.</p></li>
 <li><p>Make sure that <code class="prettyprint">hw.battery=yes</code> in your AVD&rsquo;s <code class="prettyprint">config.ini</code>.</p></li>
 <li><p>There exists a hardware accelerated emulator for android, it has its own
 limitations. For more information you can check out this
-<a href="#android-hax-emulator.md"></a>.</p></li>
+<a href="#android-hax-emulator.md">page</a>.</p></li>
 </ul>
 
 <h1 id="running-appium-on-windows">Running Appium on Windows</h1>
@@ -2035,7 +2035,7 @@ windows to run in the regular command prompt.</li>
 
 <p>node .</p>
 
-<p>See the<a href="#server-args.md"></a>
+<p>See the <a href="#server-args.md">server documentation</a>
 for all the command line arguments.</p>
 
 <h2 id="notes">Notes</h2>
@@ -2045,7 +2045,7 @@ for all the command line arguments.</p>
 to work on Windows.</li>
 <li>There exists a hardware accelerated emulator for android, it has it&rsquo;s own
 limitations. For more information you can check out this
-<a href="#android-hax-emulator.md"></a>.</li>
+<a href="#android-hax-emulator.md">page</a>.</li>
 <li>Make sure that <code class="prettyprint">hw.battery=yes</code> in your AVD&rsquo;s <code class="prettyprint">config.ini</code>.</li>
 </ul>
 
@@ -2109,8 +2109,8 @@ all set now!</p>
 connected. If you run <code class="prettyprint">adb devices</code>, for example, you should see one device
 connected. This is the device Appium will use for tests. Of course, to have
 a device connected, you&rsquo;ll need to have made an Android AVD (see system
-setup <a href="#running-on-windows.md"></a>,<a href="#running-on-osx.md"></a>,
-or<a href="#running-on-linux.md"></a>)
+setup  <a href="#running-on-windows.md">Windows</a>, <a href="#running-on-osx.md">Mac</a>,
+or <a href="#running-on-linux.md">Linux</a>)
 for more information). If the Android SDK tools are on your path, you can
 simply run:</p>
 
@@ -2783,7 +2783,7 @@ for example, to long press an element you can do:</p>
 </ul>
 
 <p>Some other gestures are supported through the &ldquo;Alternative access method&rdquo;
-explained in<a href="#gestures.md"></a></p>
+explained in <a href="#gestures.md">Automating mobile gestures</a></p>
 
 <h1 id="troubleshooting-appium">Troubleshooting Appium</h1>
 
@@ -2798,7 +2798,7 @@ to github or write to the appium-discuss mailing list.</p>
 <li>Make sure you&rsquo;ve followed the getting started steps in the <a href="https://github.com/appium/appium/blob/master/README.md">README</a></li>
 <li>Make sure your system is set up appropriately (i.e., XCode is updated,
 Android SDK is installed and <code class="prettyprint">ANDROID_HOME</code> is set:
-<a href="#running-on-osx.md"></a></li>
+<a href="#running-on-osx.md">setup instructions</a></li>
 <li>Make sure the paths to your applications are correct</li>
 </ul>
 
