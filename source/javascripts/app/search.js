@@ -42,9 +42,17 @@
       .on('blur', inactive);
   }
 
+  function resetHeaderCounts() {
+     var headers = $(".tocify-header");
+     $.each(headers, function (index, item) {
+       $("#" + item.id + " li span").remove();
+     });
+   }
+
   function search (event) {
     searchInfo.hide();
     unhighlight();
+    resetHeaderCounts();
 
     // ESC clears the field
     if (event.keyCode === 27) this.value = '';
@@ -52,8 +60,15 @@
     if (this.value) {
       var results = index.search(this.value);
       if (results.length) {
+        var counts = {};
         $.each(results, function (index, item) {
-          $('.tocify-item[data-unique=' + item.ref + ']').closest('.tocify-header').show();
+          if (!counts[item.ref]) counts[item.ref] = 0;
+          counts[item.ref] += 1;
+        });
+        $.each(counts, function (key, value) {
+          var header = $('.tocify-item[data-unique=' + key + ']').closest('.tocify-header');
+          if (header.length > 0) header = header[0];
+          if (header) $("#" + header.id + " li a").append("<span>&nbsp;</span>");
         });
         highlight.call(this);
       } else {
